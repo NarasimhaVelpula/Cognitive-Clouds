@@ -27,7 +27,6 @@ export const usersSlice = createSlice({
       return state;
     },
     updateUser: (state,action) => {
-      let id=action.payload.id;
       let user=action.payload.user;
       state.users[state.activeUserIndex]=user;
       return state;

@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Button from '../Button'
 import InputLabel from '../InputLabel'
 import './InputFeilds.css'
-import {setActiveUserIndex,addUser,deleteUser,updateUser} from '../../ReduxStore/users'
+import {addUser,deleteUser,updateUser} from '../../ReduxStore/users'
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function InputFeilds(props) {
@@ -22,7 +22,7 @@ export default function InputFeilds(props) {
             lastName:selectedUserIndex!==undefined?users[selectedUserIndex].lastName:'',
             userName:selectedUserIndex!==undefined?users[selectedUserIndex].userName:''
         })
-    },[selectedUserIndex])
+    },[selectedUserIndex,users])
 
     let handleChange=(e)=>{
         
