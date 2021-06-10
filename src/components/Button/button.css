@@ -1,0 +1,7 @@
+.button-style{
+    padding:20px;
+    @media screen {
+        display:inline;
+    }
+    
+}
